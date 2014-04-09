@@ -167,7 +167,7 @@ class LocalBundleClient(BundleClient):
     #############################################################################
 
     def new_worksheet(self, name):
-        worksheet = Worksheet({'name': name, 'items': []})
+        worksheet = Worksheet({'name': name, 'items': [], 'owner_id': None})
         self.model.save_worksheet(worksheet)
         return worksheet.uuid
 

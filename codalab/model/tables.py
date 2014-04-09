@@ -67,10 +67,10 @@ worksheet = Table(
   Column('id', Integer, primary_key=True, nullable=False),
   Column('uuid', String(63), nullable=False),
   Column('name', String(255), nullable=False),
-  #Column('owner_id', Integer, nullable=True),
+  Column('owner_id', Integer, nullable=True),
   UniqueConstraint('uuid', name='uix_1'),
   Index('worksheet_name_index', 'name'),
-  #Index('worksheet_owner_index', 'owner_id'),
+  Index('worksheet_owner_index', 'owner_id'),
   sqlite_autoincrement=True,
 )
 
